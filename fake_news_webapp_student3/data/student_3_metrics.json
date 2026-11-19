@@ -1,0 +1,56 @@
+{
+  "student": 3,
+  "algorithm": "Word Embedding + BiLSTM",
+  "partition_fingerprint": "d17a2299ad1e64b524d50ac41e3b9828308b4c483a80ced900d85fc913777544",
+  "test_metrics": {
+    "accuracy": 0.9498956158663883,
+    "precision": 0.903814935064935,
+    "recall": 0.9476595744680851,
+    "f1": 0.9252181138346489
+  },
+  "robustness": [
+    {
+      "subset": "All test headlines",
+      "rows": 7185,
+      "fake_rows": 2350,
+      "accuracy": 0.9499,
+      "precision": 0.9038,
+      "recall": 0.9477,
+      "f1": 0.9252
+    },
+    {
+      "subset": "Excluding synthetic (AUGMENT)",
+      "rows": 5860,
+      "fake_rows": 1025,
+      "accuracy": 0.9512,
+      "precision": 0.8046,
+      "recall": 0.9522,
+      "f1": 0.8722
+    },
+    {
+      "subset": "Without giveaway words",
+      "rows": 5193,
+      "fake_rows": 462,
+      "accuracy": 0.9397,
+      "precision": 0.6347,
+      "recall": 0.7597,
+      "f1": 0.6916
+    },
+    {
+      "subset": "Neither synthetic nor giveaway",
+      "rows": 4922,
+      "fake_rows": 191,
+      "accuracy": 0.9506,
+      "precision": 0.4261,
+      "recall": 0.7853,
+      "f1": 0.5525
+    }
+  ],
+  "details": {
+    "vocab_size": 20000,
+    "max_len": 40,
+    "embedding_dim": 100,
+    "lstm_units": 64,
+    "epochs_run": 4
+  }
+}

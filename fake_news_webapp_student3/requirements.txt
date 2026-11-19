@@ -1,0 +1,7 @@
+fastapi>=0.110
+uvicorn>=0.27
+tensorflow>=2.16
+pandas
+numpy
+pytest
+httpx
